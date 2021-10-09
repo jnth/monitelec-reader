@@ -22,3 +22,10 @@ Use `teleinfo-serial-reader --help` to show command usage.
 
 Use the `--use-generator` option of the `teleinfo-serial-reader` script.
 
+
+## Build source and wheel package
+
+In the virtual environment:
+
+    pip install -U pip build
+    python -m build

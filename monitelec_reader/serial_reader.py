@@ -41,7 +41,7 @@ async def read_serial_teleinfo_data(device: str):
 
 
 def wait_for(path: str, pause: int = 1, timeout: int = 5):
-    """Wait for the existance of a path.
+    """Wait for the existence of a path.
 
     :param path: path of check
     :param pause: pause between each tries (seconds)
