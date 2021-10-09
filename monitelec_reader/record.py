@@ -38,4 +38,3 @@ class Record:
         return json.dumps({"dt_utc": self.dt_utc.strftime("%Y-%m-%d %H:%M:%S"), "ptec": self.ptec,
                            "hc": self.hc, "hp": self.hp, "iinst": self.iinst, "papp": self.papp},
                           separators=(',', ':'))
-
