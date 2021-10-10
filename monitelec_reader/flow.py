@@ -45,7 +45,7 @@ class Flow:
         self.message += raw
 
         # If a record is found, save it
-        match = pattern.search(self.message):
+        match = pattern.search(self.message)
         if match:
             record = Record(**match.groupdict(), dt_utc=datetime.datetime.utcnow())
             self.logger_level_interval(f"Record read: {record}")
