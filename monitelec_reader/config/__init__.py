@@ -1,7 +1,7 @@
 from pathlib import Path
 from dynaconf import Dynaconf
 
-root_dir = Path('.')
+root_dir = Path(__file__).absolute().parent
 home_dir = Path('~').expanduser()
 
 settings = Dynaconf(
