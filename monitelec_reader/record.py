@@ -36,5 +36,5 @@ class Record:
     def as_json(self):
         """Information as JSON string (most compact JSON representation)."""
         return json.dumps({"dt_utc": self.dt_utc.strftime("%Y-%m-%d %H:%M:%S"), "ptec": self.ptec,
-                           "hc": self.hc, "hp": self.hp, "iinst": self.iinst, "papp": self.papp},
+                           "hc": self.hc, "hp": self.hp, "isousc": self.isousc, "iinst": self.iinst, "papp": self.papp},
                           separators=(',', ':'))
