@@ -71,11 +71,12 @@ def launch_generator():
 @click.command()
 @click.option("-d", "--device", metavar="path", default="/tmp/serial", help="device to listen")
 @click.option("--use-generator", is_flag=True, default=False, help="use data generator")
+@click.option("-o", "--records-output", metavar="path", default="./records.log", help="path of records to save")
 @click.option("-v", "--verbose", is_flag=True, default=False, help="verbose mode (debug)")
-def main(device: str, use_generator: bool = False, verbose: bool = False):
+def main(device: str, use_generator: bool = False, records_output: str = "./records.log", verbose: bool = False):
     """monitelec-reader :: start the teleinfo data reader."""
 
-    configure_logs(verbose)
+    configure_logs(verbose, records_output=records_output)
     device = launch_generator() if use_generator else device
 
     # Check if the device exists

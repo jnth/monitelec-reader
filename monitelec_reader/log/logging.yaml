@@ -8,14 +8,28 @@ formatters:
   all-line-colored:
     class: colorlog.ColoredFormatter
     format: "%(log_color)s%(asctime)s :: %(name)s :: %(levelname)s :: %(message)s%(reset)s"
+filters:
+  one_per_minutes:
+    (): monitelec_reader.log.custom.FilterOnePerMinutes
 handlers:
   console:
     class: logging.StreamHandler
     level: DEBUG
     formatter: all-line-colored
     stream: ext://sys.stdout
+  buffered_file:
+    (): monitelec_reader.log.custom.DataLogger
+    level: DEBUG
+    capacity: 60
+    filename: records.log
+    formatter: simple
+    filters: [one_per_minutes]
 loggers:
   monitelec:
     level: DEBUG
     handlers: [console]
+    propagate: no
+  monitelec.flow:
+    level: DEBUG
+    handlers: [console, buffered_file]
     propagate: no
