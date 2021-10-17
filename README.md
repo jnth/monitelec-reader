@@ -40,3 +40,12 @@ poetry publish -r gitlab-majordome
 
 __Note: use `POETRY_HTTP_BASIC_GITLAB_MAJORDOME_USERNAME` and `POETRY_HTTP_BASIC_GITLAB_MAJORDOME_PASSWORD`
 to define GitLab credentials.__ It's normally in `~/.env`.
+
+
+## Installation
+
+Use:
+
+```shell
+curl http://majordome:8050/jonathan/monitelec-reader/-/raw/main/install.sh | sudo bash
+```
