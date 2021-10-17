@@ -18,6 +18,7 @@ pytest = "^3.4"
 
 [tool.poetry.scripts]
 monitelec-reader = 'monitelec_reader.serial_reader:main'
+monitelec-reader-generate-service = 'monitelec_reader.service:generate_service'
 
 [build-system]
 requires = ["poetry>=1.0.2", "poetry-dynamic-versioning"]

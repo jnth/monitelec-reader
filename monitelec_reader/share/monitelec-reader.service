@@ -1,0 +1,15 @@
+# Systemd service of `monitelec-reader`
+
+[Unit]
+Description=Monitelec Reader
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/opt/monitelec-reader/bin/monitelec-reader -d /dev/ttyAMA0 -o /opt/monitelec-reader/log/records.log
+Restart=always
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
