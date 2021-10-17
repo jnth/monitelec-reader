@@ -1,0 +1,3 @@
+[repositories]
+[repositories.gitlab-majordome]
+url = "http://majordome:8050/api/v4/projects/jonathan%2Fmonitelec-reader/packages/pypi"

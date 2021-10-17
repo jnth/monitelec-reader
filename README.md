@@ -23,10 +23,19 @@ Use `teleinfo-serial-reader --help` to show command usage.
 Use the `--use-generator` option of the `teleinfo-serial-reader` script.
 
 
-## Build source and wheel package
+## Build and publish
 
 We use `poetry` to build package:
 
 ```shell
 poetry build
 ```
+
+Publish in `majordome` GitLab:
+
+```shell
+poetry publish -r gitlab-majordome
+```
+
+__Note: use `POETRY_HTTP_BASIC_GITLAB_MAJORDOME_USERNAME` and `POETRY_HTTP_BASIC_GITLAB_MAJORDOME_PASSWORD`
+to define GitLab credentials.__ It's normally in `~/.env`.
