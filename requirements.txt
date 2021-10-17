@@ -1,6 +1,0 @@
-aioserial
-click
-PyYAML
-paho-mqtt
-colorlog
-dynaconf

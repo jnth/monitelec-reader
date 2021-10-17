@@ -25,7 +25,8 @@ Use the `--use-generator` option of the `teleinfo-serial-reader` script.
 
 ## Build source and wheel package
 
-In the virtual environment:
+We use `poetry` to build package:
 
-    pip install -U pip build
-    python -m build
+```shell
+poetry build
+```
