@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "monitelec-reader"
-version = "0.2.0"
+version = "~~dynamic-version~~"
 description = "Read and process the serial teleinfo data."
 authors = ["Jonathan Virga <jonathan.virga@gmail.com>"]
 
@@ -20,5 +20,5 @@ pytest = "^3.4"
 monitelec-reader = 'monitelec_reader.serial_reader:main'
 
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["poetry>=1.0.2", "poetry-dynamic-versioning"]
+build-backend = "poetry.masonry.api"

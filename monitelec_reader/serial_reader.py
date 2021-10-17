@@ -12,6 +12,7 @@ import logging
 import aioserial
 import click
 
+from monitelec_reader import __version__
 from monitelec_reader.flow import Flow
 from monitelec_reader import generator
 from monitelec_reader.log import configure_logs
@@ -76,7 +77,9 @@ def launch_generator():
 def main(device: str, use_generator: bool = False, records_output: str = "./records.log", verbose: bool = False):
     """monitelec-reader :: start the teleinfo data reader."""
 
+    # Configure log, do not use log before this line
     configure_logs(verbose, records_output=records_output)
+    log.info(f"Starting monitelec-reader v{__version__}")
     device = launch_generator() if use_generator else device
 
     # Check if the device exists

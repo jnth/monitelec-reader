@@ -28,6 +28,7 @@ Use the `--use-generator` option of the `teleinfo-serial-reader` script.
 We use `poetry` to build package:
 
 ```shell
+poetry-dynamic-versioning
 poetry build
 ```
 
