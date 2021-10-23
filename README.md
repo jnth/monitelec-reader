@@ -30,6 +30,7 @@ We use `poetry` to build package:
 ```shell
 poetry-dynamic-versioning
 poetry build
+git checkout -- pyproject.toml monitelec_reader/__init__.py
 ```
 
 Publish in `majordome` GitLab:
